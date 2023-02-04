@@ -6,8 +6,8 @@ def  simulate(Δt, x, u):
     return x
 
 def control(t, y):
-    ux = sin(t)*4
-    uy = cos(t)*2
+    ux = cos(t)*4
+    uy = sin(t)*2
     return array([ux, uy])
 
 tf = 7
@@ -15,7 +15,7 @@ tf = 7
 time = linspace(0., tf, int(tf / Δt) + 1 )
 
 #Initial conditions
-x = array([-1., 1.9])
+x = array([2.8, 0])
 x_log = [copy(x)]
 
 for t in time:
